@@ -1,4 +1,4 @@
-hamletink/common
+jhamlet/common
 =================
 
 > Common utility functions
@@ -7,18 +7,18 @@ Installation
 ------------
 
 ```
-npm install --save @hamletink/common
+npm install --save @jhamlet/common
 ```
 
 Usage
 -----
 
 ```js
-import { isNumber } from '@hamletink/common';
+import { isNumber } from '@jhamlet/common';
 
 // or
 
-import { isNumber } from '@hamletink/predicates';
+import { isNumber } from '@jhamlet/predicates';
 ```
 
 Report an Issue
