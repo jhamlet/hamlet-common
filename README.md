@@ -24,7 +24,7 @@ import { isNumber } from '@jhamlet/predicates';
 Report an Issue
 ---------------
 
-* [Bugs](http://github.com/jhamlet/hamletink-common/issues)
+* [Bugs](http://github.com/jhamlet/common/issues)
 * Contact the author: <jerry@hamletink.com>
 
 
