@@ -16,35 +16,35 @@ export const defaultToArray      = ifElse(isArray, identity, defaultToEmptyArray
 // Camel Case and Back Again Utilities
 //------------------------------------------------------------------------------
 // this matches the position before any uppercase letter
-const CAMEL_REGEX = /(?=[A-Z])/;
-export const upFirst      = converge(concat, [pipe(head, toUpper), tail]);
-export const splitCamel   = split(CAMEL_REGEX);
-export const splitKabob   = split('-');
-export const splitSnake   = split('_');
-export const joinCamel    = join('');
-export const joinKabob    = join('-');
-export const joinSnake    = join('_');
-export const allLower     = map(toLower);
-export const allToUpFirst = map(upFirst);
-export const camelToKabob = pipe(splitCamel, allLower, joinKabob);
-export const camelToSnake = pipe(splitCamel, allLower, joinSnake);
+const BEFORE_CAPITAL_REGEX      = /(?=[A-Z])/;
+export const upFirst            = converge(concat, [pipe(head, toUpper), tail]);
+export const splitOnCapital     = split(BEFORE_CAPITAL_REGEX);
+export const splitOnDash        = split('-');
+export const splitOnUnderscore  = split('_');
+export const joinWithEmpty      = join('');
+export const joinWithDash       = join('-');
+export const joinWithUnderscore = join('_');
+export const allLower           = map(toLower);
+export const allToUpFirst       = map(upFirst);
+export const camelToKabob       = pipe(splitOnCapital, allLower, joinWithDash);
+export const camelToSnake       = pipe(splitOnCapital, allLower, joinWithUnderscore);
 
 export const kabobToCamel =
   pipe(
-    splitKabob,
+    splitOnDash,
     converge(concat, [
       pipe(head, toLower, of),
       pipe(tail, allLower, allToUpFirst)
     ]),
-    joinCamel
+    joinWithEmpty
   );
 
 export const snakeToCamel =
   pipe(
-    splitSnake,
+    splitOnUnderscore,
     converge(concat, [
       pipe(head, toLower, of),
       pipe(tail, allLower, allToUpFirst)
     ]),
-    joinCamel
+    joinWithEmpty
   );
