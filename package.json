@@ -1,7 +1,6 @@
 {
   "name": "@hamletink/util",
-  "version": "1.0.0-beta.1",
-  "private": false,
+  "version": "1.0.0",
   "description": "Common utility functions",
   "main": "index.js",
   "scripts": {
