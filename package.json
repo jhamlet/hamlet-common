@@ -5,6 +5,7 @@
   "description": "Common utility functions",
   "main": "index.js",
   "scripts": {
+    "clean": "./task/clean.sh",
     "build": "NODE_ENV=production ./task/build.sh",
     "dev": "NODE_ENV=development ./task/start.sh",
     "test": "NODE_ENV=test ./task/test.sh"
@@ -16,7 +17,7 @@
     "url": "git+https://github.com/jhamlet/hamletink-util.git"
   },
   "dependencies": {
-    "ramda": "0.25.0"
+    "ramda": "^0.25.0"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
