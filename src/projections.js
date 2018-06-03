@@ -7,6 +7,7 @@ import { isArray, isNil } from './predicates';
  * A `projection` is a mapping function. Something that 'projects' one thing
  * into something else.
  */
+export const noop                = () => {};
 export const emptyObject         = pipe(always({}), empty);
 export const emptyArray          = pipe(always([]), empty);
 export const defaultToEmptyArray = ifElse(isNil, emptyArray, of);
