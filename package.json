@@ -1,13 +1,14 @@
 {
   "name": "@hamletink/util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Common utility functions",
   "main": "index.js",
   "scripts": {
     "clean": "./task/clean.sh",
     "build": "NODE_ENV=production ./task/build.sh",
     "dev": "NODE_ENV=development ./task/start.sh",
-    "test": "NODE_ENV=test ./task/test.sh"
+    "test": "NODE_ENV=test ./task/test.sh",
+    "publish": "npm run clean && npm run build && npm publish"
   },
   "author": "Jerry Hamlet <jerry@hamletink.com>",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "url": "git+https://github.com/jhamlet/hamletink-util.git"
   },
   "dependencies": {
+    "debug": "^3.1.0",
     "ramda": "^0.25.0"
   },
   "devDependencies": {
