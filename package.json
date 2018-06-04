@@ -7,8 +7,7 @@
     "clean": "./task/clean.sh",
     "build": "NODE_ENV=production ./task/build.sh",
     "dev": "NODE_ENV=development ./task/start.sh",
-    "test": "NODE_ENV=test ./task/test.sh",
-    "publish": "npm run build && npm publish"
+    "test": "NODE_ENV=test ./task/test.sh"
   },
   "author": "Jerry Hamlet <jerry@hamletink.com>",
   "license": "ISC",
