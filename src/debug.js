@@ -2,7 +2,7 @@ import debug from 'debug';
 import { merge, objOf } from 'ramda';
 import { isArray } from './predicates';
 
-const KEYS = [['log': 'debug'], 'info', 'warn', 'error'];
+const KEYS = [['log', 'debug'], 'info', 'warn', 'error'];
 
 export const create = namespace =>
   Object.assign(
