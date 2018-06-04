@@ -1,6 +1,6 @@
 {
   "name": "@hamletink/util",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Common utility functions",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "NODE_ENV=production ./task/build.sh",
     "dev": "NODE_ENV=development ./task/start.sh",
     "test": "NODE_ENV=test ./task/test.sh",
-    "publish": "npm run clean && npm run build && npm publish"
+    "publish": "npm run build && npm publish"
   },
   "author": "Jerry Hamlet <jerry@hamletink.com>",
   "license": "ISC",
